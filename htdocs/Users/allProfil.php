@@ -13,7 +13,7 @@ $selectUser->execute([
 ]);
 $user = $selectUser->fetch(PDO::FETCH_ASSOC);
  if(!$user){
-    header('Location:allProfil.php?message=Vous êtes deconnecté, merci de votre visite!');
+    echo("Utilisateur inconnu");
  }
 
 $selectPhotosUser = $pdo->prepare('SELECT photo.* FROM photo WHERE photo.id_user = ?');
@@ -53,7 +53,7 @@ $nbrPublication = $NbrPhotos->fetch();
             <?php foreach ($selectPhotosUser->fetchAll(PDO::FETCH_ASSOC) as $photo) { ?>
                 <div class="col-sm-3"><br>
                     <h4><?= $photo['Comment'] ?></h4>
-                    <img class="photosIndex" src="<?= $photo['Photos'] ?>"><br><br>
+                    <img class="photosIndex" src="<?= $photo['Photos'] ?>"><br>
                     <div class="likeComment">
                         <a class="like-button launcher-like"data-idPhoto = "<?= $photo['id'] ?>">
                             <svg data-idPhoto = "<?= $photo['id'] ?>" width="30" height="30" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">

@@ -6,12 +6,12 @@
         <div class="formlogin">
             <form action="../requetes/login.php" method="POST" class="login">
                 <br><h1>Connexion</h1>
-                <div class="labelLogin">
+                <div class="labelCo">
                     <label><b> Pseudo </b></label><br><br>
                     <input type="text" class="input-field" placeholder="Entrer votre Pseudo" name="pseudo" required>
                 </div><br>
                                    
-                <div class="labelLogin">
+                <div class="labelCo">
                     <label><b> Mot de Passe </b></label><br><br>
                     
                     <input type="password" class="input-field" placeholder="Votre mot de passe" name="password" id="password" required>
